@@ -4,25 +4,20 @@ function List(props) {
     for (let i = 1; i <= 5; i++) {
       skills.push({
         id: i,
-        name: props[`name${i}`],
-        skillLevel: props[`skillLvl${i}`],
+        name: props[`name${i}`] || `Skill Name${i}`,
+        skillLevel: props[`skillLvl${i}`] || `Skill Level${i}`,
       });
     }
     return skills;
   };
 
   const skills = createSkillArray(props);
-  const highSkillLevels = skills.filter((skill) => skill.skillLevel > 4);
 
-  // // alphabetic order
-  // skills.sort((firstItem, secondItem) =>
-  //   firstItem.name.localeCompare(secondItem.name)
-  // );
-
-  // reverse numerical order (descending)
   skills.sort(
     (firstItem, secondItem) => secondItem.skillLevel - firstItem.skillLevel
   );
+
+  const listTitle = props.listTitle;
 
   const listItems = skills.map((skills) => (
     <li key={skills.id}>
@@ -30,7 +25,14 @@ function List(props) {
     </li>
   ));
 
-  return <ul>{listItems}</ul>;
+  return (
+    listItems.length > 4 && (
+      <>
+        <h3 className="list-title">{listTitle}</h3>
+        <ul className="list-items">{listItems}</ul>
+      </>
+    )
+  );
 }
 
 export default List;

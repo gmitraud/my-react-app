@@ -63,3 +63,26 @@ body {
     text-align: center;
     font-size: 2.5em;
 }
+
+.list-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.list-items li{
+    font-size: 1em;
+    list-style: none;
+    text-align: left;
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+}
+
+.list-items li:hover{
+    color: hsl(276, 76%, 65%);
+    list-style: square;
+}

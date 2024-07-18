@@ -18,6 +18,7 @@ function App() {
         title="Male Profile"
         text={
           <List
+            listTitle="Skills"
             id1={1}
             name1="Javascript"
             skillLvl1={9}
@@ -41,6 +42,7 @@ function App() {
         title="Female Profile"
         text={
           <List
+            listTitle="Skills"
             id1={1}
             name1="Javascript"
             skillLvl1={4}
