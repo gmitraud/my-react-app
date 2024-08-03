@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 function List(props) {
   const createSkillArray = (props) => {
     let skills = [];
@@ -25,11 +27,29 @@ function List(props) {
     </li>
   ));
 
-  return (
+  const [textColor, setTextColor] = useState("rgb(255, 255, 255)")
+
+  useEffect(() => {
+      const bgColor = window.getComputedStyle(document.documentElement).backgroundColor;
+      console.log("Background color detected:", bgColor);
+
+      if (bgColor === "rgb(62, 61, 61)") {
+        setTextColor("rgb(255, 255, 255)");
+      } else {
+        setTextColor("rgb(62, 61, 61)");
+      }
+
+  }, [textColor]);
+  
+    return (
     listItems.length > 4 && (
       <>
-        <h3 className="list-title">{listTitle}</h3>
-        <ul className="list-items">{listItems}</ul>
+        <h3 className="list-title" >
+          {listTitle}
+        </h3>
+        <ul className="list-items" >
+          {listItems}
+        </ul>
       </>
     )
   );

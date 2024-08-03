@@ -1,6 +1,10 @@
+html,
 body {
-    margin: 0%;
-    background-color: #3e3d3d;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(62, 61, 61); */
 }
 
 .card {
@@ -12,7 +16,7 @@ body {
     text-align: center;
     max-width: 250px;
     display: inline-block;
-    background-color: hsla(0, 8%, 90%, 0.2);
+    /* background-color: hsla(0, 8%, 90%, 0.2); */
 }
 
 .card .card-img {
@@ -21,25 +25,27 @@ body {
     border-radius: 50%;
 }
 
-.card .card-title{
+.card .card-title {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
-    color: rgb(255, 255, 255);
+    /* color: rgb(0, 255, 255); */
 }
 
-.card .card-text{
+.card .card-text {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    mix-blend-mode: difference;
     color: rgb(255, 255, 255);
 }
 
-.loggedon-message, .loggedoff-message {
+.loggedon-message,
+.loggedoff-message {
     font-size: 1em;
     padding: 2px;
     border-radius: 5px;
     text-align: center;
     width: 15%;
     font-family: 'Courier New', Courier, monospace;
-    background-color: hsl(95, 89%, 93%, 0);
+    /* background-color: hsl(95, 89%, 93%, 0); */
 }
 
 .loggedon-message {
@@ -74,15 +80,14 @@ body {
     border-radius: 5px;
 }
 
-.list-items li{
+.list-items li {
     font-size: 1em;
     list-style: none;
     text-align: left;
-    color: hsl(0, 0%, 100%);
     margin: 0;
 }
 
-.list-items li:hover{
-    color: hsl(276, 76%, 65%);
+.list-items li:hover {
+    color: hsl(185, 91%, 56%);
     list-style: square;
 }
